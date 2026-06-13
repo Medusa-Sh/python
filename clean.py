@@ -1,0 +1,17 @@
+class IOString():
+
+
+    def __init__(self):
+        self.str1 = ""
+
+    def get_string(self):
+        self.str1 = input("Enter a string: ")
+
+    def print_string(self):
+        print("I will print the string in uppercase: " + self.str1.upper())
+    
+str1=IOString()
+
+
+str1.get_string()
+str1.print_string()
