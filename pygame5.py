@@ -1,0 +1,25 @@
+from tkinter import*
+root=Tk()
+root.title("Getting Started with Widgets")
+root.geometry("400x300")
+lbl = Label(text="Hello!", fg="white", bg="#072F5F", height=1, width=300)
+lbl2 = Label(text="Please enter 2 numbers.", fg="white", bg="#072F5F", height=1, width=300)
+name_lbl = Label(text="Getting started with widgets", bg="#D33866")
+num1_entry = Entry()
+num2_entry=Entry()
+def display():
+	num1=float(num1_entry.get())
+	num2=float(num2_entry.get())
+	global message
+	product=num1*num2
+	text_box.insert(END,product)
+text_box = Text(height=3)
+btn = Button(text="Entered", command=display, height=1, bg="#1261A0", fg='white')
+lbl.pack()
+lbl2.pack()
+name_lbl.pack()
+num1_entry.pack()
+btn.pack()
+text_box.pack()
+num2_entry.pack()
+root.mainloop()
